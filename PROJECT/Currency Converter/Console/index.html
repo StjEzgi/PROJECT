@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="/Currency Converter/Console/style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <h1>Currency Converter</h1>
+      <div class="container">
+        <input
+          oninput="convertCurrency()"
+          id="userValue"
+          type="number"
+          placeholder="Please enter your value."
+          class="box-1"
+        />
+        <select onchange="convertCurrency()" id="fromCurrency" class="box-2">
+          <option value="TRY">Turkish Liras</option>
+          <option value="USD">USD</option>
+          <option value="EUR">Euro</option>
+          <option value="GBP">Pound</option>
+        </select>
+
+        <select onchange="convertCurrency()" id="toCurrency" class="box-2">
+          <option value="USD">USD</option>
+          <option value="EUR">Euro</option>
+          <option value="GBP">Pound</option>
+          <option value="TRY">Turkish Liras</option>
+        </select>
+      </div>
+      <p>Result:</p>
+      <div id="result" class="box-3"></div>
+    </div>
+  </body>
+  <script src="api.js"></script>
+</html>
